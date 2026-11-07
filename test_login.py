@@ -57,8 +57,8 @@ def test_product_is_displayed_in_cart(page: Page):
         "https://www.saucedemo.com/cart.html"
     )
     expect(
-        page.locator('[data-test="inventory-item-name"]')
-    ).to_have_text("Sauce Labs Backpack")
+    page.get_by_text("Sauce Labs Backpack", exact=True)
+    ).to_be_visible()
 #5
 def test_login_with_invalid_password(page: Page):
     page.goto("https://www.saucedemo.com/")
