@@ -2,7 +2,7 @@ from playwright.sync_api import Page, expect
 
 #1
 def test_login_page_is_displayed(page: Page):
-    page.goto("https://www.saucedemo.com/")
+    page.goto("https://www.semo.com/")
 
     expect(page.locator('[data-test="username"]')).to_be_visible()
     expect(page.locator('[data-test="password"]')).to_be_visible()
